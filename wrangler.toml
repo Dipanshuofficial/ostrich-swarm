@@ -1,0 +1,15 @@
+name = "ostrich-swarm"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[durable_objects]
+bindings = [
+  { name = "SWARM_COORDINATOR", class_name = "SwarmCoordinator" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["SwarmCoordinator"]
+
+[vars]
+ENVIRONMENT = "production"
